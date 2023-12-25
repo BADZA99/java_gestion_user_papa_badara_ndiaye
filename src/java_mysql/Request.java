@@ -27,7 +27,7 @@ public class Request {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
-                System.out.println("ID: " + resultSet.getInt("id") + ", Role: " + resultSet.getString("role_name"));
+                System.out.println("ID: " + resultSet.getInt("id") + " "+ resultSet.getString("name"));
             }
         } catch (SQLException e) {
             System.out.println("Erreur lors de l'affichage des rôles : " + e.getMessage());

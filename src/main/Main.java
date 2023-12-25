@@ -37,8 +37,8 @@ public class Main {
                         email = scanner.next();
                     } while (email.length() < 8);
                     do {
-                        System.out.print("choisir un rôle : ");
                         Request.displayRoles();
+                        System.out.print("choisir l'id d'un rôle : ");
                         role_id = scanner.nextInt();
                     } while (role_id < 1 || role_id > 3);
                     // HASHER LE MOT DE PASSE 

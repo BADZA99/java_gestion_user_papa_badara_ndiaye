@@ -20,7 +20,7 @@ public class javaMysqlConnection {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USER, DATABASE_PASSWORD);
-            System.out.println("La connexion à la base de données a bien été établie");
+            // System.out.println("La connexion à la base de données a bien été établie");
         } catch (SQLException e) {
             System.out.println("La connexion à la base de données a échoué : " + e.getMessage());
         }
