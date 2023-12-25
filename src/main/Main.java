@@ -17,6 +17,7 @@ public class Main {
         int choice;
 
         do {
+            System.out.println("Bienvenue dans l'application de gestion des utilisateurs !");
             System.out.println("1. Inserer un utilisateur");
             System.out.println("2. Afficher les rôles");
             System.out.println("3. Afficher les utilisateurs");
@@ -25,10 +26,11 @@ public class Main {
             choice = scanner.nextInt();
 
             switch (choice) {
+
                 case 1:
                     // saisir user 
                     do {
-                        System.out.print("Saisissez un mot de passe : ");
+                        System.out.print("Saisissez un mot de passe de 8 caractere minimum : ");
                         password = scanner.next();
                     } while (password.length() < 8);
                     System.out.println(password);
@@ -50,12 +52,15 @@ public class Main {
                     Request.insertUser(password, passwordHashed, email, role_id);
                     break;
                 case 2:
+                    System.out.println("Liste des Roles");
                     Request.displayRoles();
                     break;
                 case 3:
+                    System.out.println("Liste des utilisateurs");
                     Request.displayUsers();
                     break;
                 case 0:
+
                     System.out.println("Au revoir !");
                     break;
                 default:
