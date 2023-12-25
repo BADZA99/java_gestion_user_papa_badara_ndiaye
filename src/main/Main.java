@@ -53,6 +53,7 @@ public class Main {
                     Request.displayRoles();
                     break;
                 case 3:
+                    Request.displayUsers();
                     break;
                 case 0:
                     System.out.println("Au revoir !");
